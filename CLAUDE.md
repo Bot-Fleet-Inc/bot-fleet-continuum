@@ -16,10 +16,17 @@ This file provides guidance to Claude Code when working in the bot-fleet-continu
 
 ### Document Structure
 
-- **Architecture/** — ArchiMate viewpoints organised by type (Layered, Technology, Motivation)
+- **Architecture/** — ArchiMate viewpoints organised by type (10 viewpoints + Models/)
+  - Application-Cooperation, Application-Usage, Implementation, Information-Structure
+  - Layered, Migration, Motivation, Physical, Project, Technology
+  - **Models/** — ArchiMate `.archimate` model files and exported images
 - **Governance/** — Organisation registry, decision logs, account inventories
-- **Process/** — BPMN process definitions
-- **Standards/** — Coding, deployment, and security standards specific to BFI
+- **Processes/** — BPMN process definitions (Level-1-Orchestration, Level-2-Coordination)
+- **Skills/** — Claude Code / OpenClaw skills specific to BFI (e.g. `bf-memory-systems`)
+- **Standards/** — Standards organised by maturity tier:
+  - **Mandated/** — MUST follow
+  - **Recommended/** — SHOULD follow
+  - **Emerging/** — MAY explore
 
 ### File Naming
 
@@ -35,12 +42,17 @@ Examples:
 - `ORGANIZATION_REGISTRY.md` — Canonical list of accounts, domains, and services
 - `DECISION_LOG.md` — Architectural Decision Records (ADRs)
 
+### Skills
+
+Skills live in `Skills/bf-<skill-name>/SKILL.md`. Each skill has its own directory.
+
 ### Conventions
 
 - Use Mermaid diagrams for visual models
 - Link every decision to a GitHub Issue number
 - Tables for structured data (account mappings, service catalogues)
 - Keep documents focused — one viewpoint per file
+- See [CONTRIBUTING.md](CONTRIBUTING.md) for document placement decision tree
 
 ## Related Repositories
 

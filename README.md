@@ -10,22 +10,39 @@ This repository is the **standards and architecture reference** for the `Bot-Fle
 - **BPMN process definitions** for bot coordination workflows
 - **Technology standards** governing bot implementation patterns
 - **Governance records** for organisation setup, accounts, and access control
+- **Skills** for Claude Code / OpenClaw bot capabilities
 
 ## Structure
 
 ```
 bot-fleet-continuum/
-├── Architecture/
-│   ├── Layered/           # ArchiMate Layered viewpoints
-│   ├── Technology/        # Technology Layer viewpoints
-│   └── Motivation/        # Motivation Layer viewpoints
-├── Governance/
-│   ├── ORGANIZATION_REGISTRY.md   # Accounts, domains, services
-│   └── DECISION_LOG.md            # Architectural decisions
-├── Process/
-│   └── (BPMN process definitions)
-└── Standards/
-    └── (Coding, deployment, security standards)
++-- Architecture/
+|   +-- Application-Cooperation/  # How bots and services integrate
+|   +-- Application-Usage/        # User/human interaction patterns
+|   +-- Implementation/           # Deployment and operations
+|   +-- Information-Structure/    # Data architecture
+|   +-- Layered/                  # ArchiMate Layered viewpoints
+|   +-- Migration/                # Architecture transitions
+|   +-- Models/                   # ArchiMate .archimate model files
+|   +-- Motivation/               # Goals, principles, drivers
+|   +-- Physical/                 # Equipment, VMs, network topology
+|   +-- Project/                  # Project management and workflows
+|   +-- Technology/               # Technology Layer viewpoints
+|   `-- README.md                 # Viewpoint index and relationship map
++-- Governance/
+|   +-- ORGANIZATION_REGISTRY.md  # Accounts, domains, services
+|   `-- DECISION_LOG.md           # Architectural decisions (ADRs)
++-- Processes/
+|   +-- Level-1-Orchestration/    # Top-level orchestration flows
+|   `-- Level-2-Coordination/     # Coordination and subprocess flows
++-- Skills/
+|   `-- bf-memory-systems/        # Memory systems skill for bot fleet
++-- Standards/
+|   +-- Mandated/                 # MUST follow
+|   +-- Recommended/              # SHOULD follow
+|   `-- Emerging/                 # MAY explore
++-- CLAUDE.md                     # Claude Code guidance
+`-- CONTRIBUTING.md               # Document placement and naming guide
 ```
 
 ## Related Repositories
@@ -41,6 +58,7 @@ bot-fleet-continuum/
 - File naming: `[subject]_[viewpoint].md` (e.g. `bot-fleet-isolation-model_technology.md`)
 - Diagrams use Mermaid syntax embedded in markdown
 - Every architectural decision links to a GitHub Issue for traceability
+- See [CONTRIBUTING.md](CONTRIBUTING.md) for document placement guidelines
 
 ## Ownership
 
